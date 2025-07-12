@@ -1,0 +1,6 @@
+<h1>Input your text below:</h1>
+<form method="POST" action="counter"><!--1.to use post in django you will need csrf token .2 action means to submit it to a url which is counter url-->
+    {% csrf_token %}
+    <textarea name='text' rows="10" cols="10"></textarea><br>
+    <input type="submit"/>
+</form>
