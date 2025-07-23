@@ -6,4 +6,8 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('counter',views.counter,name='counter'),
-    path('static',views.static,name='static')]#static is the name of the html file,then it tells me to go to view folder and loacte the static module
+    path('static',views.static,name='static'),#static is the name of the html file,then it tells me to go to view folder and loacte the static module
+    path('register',views.register,name='register'),
+    path('login',views.login, name='login'),# for creating logon page
+    path('logout',views.logout,name='logout')
+    ]

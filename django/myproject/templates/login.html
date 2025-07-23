@@ -1,0 +1,27 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+
+{% for message in messages %}
+  <h3>{{ message }}</h3>
+{% endfor %}
+
+<div class="form-wrapper">
+    <h1>Login Now</h1>
+
+    <form action="login" method="POST">
+        {% csrf_token %}
+        <p>Username:</p>
+        <input type="text" name="username" required />
+
+        <p>Password:</p>
+        <input type="password" name="password" required />
+
+        <br><br>
+        <input type="submit" value="Login" />
+    </form>
+
+    <p class="register-link">
+        Don’t have an account?
+        <a href="{% url 'register' %}">Register now</a>
+    </p>
+</div>
